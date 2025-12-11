@@ -952,3 +952,35 @@ html, body {
     }
 }
   
+
+@media (max-width: 768px) {
+  .hero-sub {
+    font-size: 16px;
+    letter-spacing: 0.3px;
+  }
+
+  /* Remove emojis e substitui por bullets automaticamente */
+  .hero-sub::before {
+    content: "• Decks   • Pergolados   • Edículas   • Móveis rústicos";
+    display: block;
+  }
+
+  /* Esconde o texto original só no mobile */
+  .hero-sub {
+    font-size: 0; /* esconde o conteúdo original */
+  }
+  .hero-sub::before {
+    font-size: 15px; /* tamanho real do texto */
+  }
+}
+
+
+@media (max-width: 860px) {
+  .hero {
+    background-image: url("imagens/banner_mobile.png"); /* sua versão mobile */
+    background-position: center top;
+    background-size: cover;
+    height: 60vh;
+    padding: 20px 12px;
+  }
+}
